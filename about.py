@@ -2,8 +2,9 @@
 This file provides standard information to
 help with debugging. 
 
+Presley Schumacher
 This file is named:   about.py
-This module is named: about
+This module is named: Rabbit MQ
 
 It uses a built-in attribute representing the file name:
 
