@@ -37,9 +37,7 @@ Once it runs and finishes, we can reuse the terminal.
 1. Read v1_listen_for_messages.py (and the tutorial)
 1. Run the file.
 
-You'll need to fix an error in the program to get it to run.
-Once it runs successfully, will it terminate on its own? How do you know? 
-As long as the process is running, we cannot use this terminal for other commands. 
+##### Once it runs, it does not terminate on its own. As long as the process is running, we cannot use this terminal for other commands. The terminal says, "To exit press CTRL+C"
 
 ## Version 1 - Open a New Terminal / Emit More Messages
 
