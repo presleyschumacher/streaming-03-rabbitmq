@@ -1,21 +1,16 @@
 """
+This program will receive messages from the queue and print them.
 
-Always customize this docstring. 
-
-Add your name, date, and a description of the program.
-
-Listens for messages on the queue.
-This process runs continously. 
-
+Presley Schumacher
+January 31 2023
+ 
 Approach
 ---------
 Simple - one producer / one consumer.
 
-
 Since this process runs continuously, 
 if we want to emit more messages, 
 we'll need to open a new terminal window.
-
 
 Terminal Reminders
 ------------------
@@ -30,23 +25,21 @@ Terminal Reminders
 # but we don't recommend it for readability
 import pika, sys, os
 
-
 # define a main function to run the program
 def main():
-    # create a blocking connection to the RabbitMQ server
-    connection = pika.BlockingConnection(pika.ConnectionParameters(host='LocalHostt'))
-    # use the connection to create a communication channel
+    # Establish a connection with RabbitMQ Server
+    connection = pika.BlockingConnection(pika.ConnectionParameters(host='LocalHost'))
     channel = connection.channel()
-    # use the channel to declare a queue
+    # Create a hello queue to which the message(s) will be delievered
     channel.queue_declare(queue='hello')
-    # define a callback function to be called when a message is received
+    # Subscribe a callback function to a queue which is called by the Pika library and will print the contents of the message
     def callback(ch, method, properties, body):
         print(" [x] Received %r" % body.decode())
-    # use the channel to consume messages from the queue
+    # Tell RabbitMQ that the callback function should receive message from the hello queue
     channel.basic_consume(queue='hello', on_message_callback=callback, auto_ack=True)
-    # print a message to the console for the user
+    # Print the message
     print(' [*] Waiting for messages. To exit press CTRL+C')
-    # start consuming messages
+    # Start consuming messages
     channel.start_consuming()
 
 # Standard Python idiom to indicate main program entry point
