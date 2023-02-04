@@ -89,6 +89,6 @@ def main(hn: str = "localhost"):
 # without executing the code below.
 # If this is the program being run, then execute the code below
 if __name__ == "__main__":
-    main("localhostttt")
+    main("localhost")
   
      
