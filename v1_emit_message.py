@@ -21,8 +21,8 @@ ch.queue_declare(queue="hello")
 # We are ready to send our second message
 # In RabbitMQ, the message goes through an exchange before being sent to the queue.
 # We will use the default exchange identified by an empty string. The queue name is specified in the routing_key parameter 
-ch.basic_publish(exchange="", routing_key="hello", body="One Last Time")
+ch.basic_publish(exchange="", routing_key="hello", body='Hello World!')
 # Print the message
-print(" [x] Sent 'One Last Time'")
+print(" [x] Sent 'Hello World!'")
 # Close the connection
 conn.close()
