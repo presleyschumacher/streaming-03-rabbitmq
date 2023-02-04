@@ -29,7 +29,7 @@ def send_message(host: str, queue_name: str, message: str):
         # use the channel to declare a queue
         channel.queue_declare(queue='queue_name')
         # use the channel to publish a message to the queue
-        channel.basic_publish(exchange='', routing_key='queue_name', body='Test1')
+        channel.basic_publish(exchange='', routing_key='queue_name', body=message)
         # print a message to the console for the user
         print(f" [x] Sent {message}")
     except pika.exceptions.AMQPConnectionError as e:
