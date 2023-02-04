@@ -18,11 +18,11 @@ ch = conn.channel()
 # Before sending a message, we need to make sure the recipient queue exists
 # We will create a hello queue to which the message(s) will be delivered
 ch.queue_declare(queue="hello")
-# We are ready to send our first message
+# We are ready to send our second message
 # In RabbitMQ, the message goes through an exchange before being sent to the queue.
 # We will use the default exchange identified by an empty string. The queue name is specified in the routing_key parameter 
-ch.basic_publish(exchange="", routing_key="hello", body="Hello World!")
+ch.basic_publish(exchange="", routing_key="hello", body="2nd Message")
 # Print the message
-print(" [x] Sent 'Hello World!'")
+print(" [x] Sent '2nd Message'")
 # Close the connection
 conn.close()
