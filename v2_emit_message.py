@@ -1,8 +1,8 @@
 """
     This program sends a message to a queue on the RabbitMQ server.
 
-    Author: Presley Schumacher
-    Date: January 31, 2023
+   Presley Schumacher
+   January 31, 2023
 
 """
 

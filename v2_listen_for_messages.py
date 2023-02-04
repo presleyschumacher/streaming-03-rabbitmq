@@ -1,8 +1,8 @@
 """
+This program will receive messages from the queue and print them.
 
-Always customize this docstring. 
-
-Add your name, date, and a description of the program.
+Presley Schumacher
+January 31, 2023
 
 Listens for messages on the queue.
 This process runs continously. 
