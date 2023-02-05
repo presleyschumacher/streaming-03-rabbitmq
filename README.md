@@ -101,5 +101,3 @@ Each of the version 2 programs include an error as well.
 ![Mac Example](screenshot.png)
 
 ![image](https://user-images.githubusercontent.com/105391626/216798987-19a684c8-905e-48f6-a75f-37791b764681.png)
-
-![Version 1_Screenshot](https://user-images.githubusercontent.com/105391626/216798978-9040937d-e6c1-4a92-916d-9a864ce2d8e9.png)
