@@ -23,13 +23,13 @@ def send_message(host: str, queue_name: str, message: str):
 
     try:
         # create a blocking connection to the RabbitMQ server
-        connection = pika.BlockingConnection(pika.ConnectionParameters(host))
+        conn = pika.BlockingConnection(pika.ConnectionParameters(host))
         # use the connection to create a communication channel
-        channel = connection.channel()
+        ch = conn.channel()
         # use the channel to declare a queue
-        channel.queue_declare(queue='queue_name')
+        ch.queue_declare(queue=queue_name)
         # use the channel to publish a message to the queue
-        channel.basic_publish(exchange='', routing_key='queue_name', body=message)
+        ch.basic_publish(exchange='', routing_key='queue_name', body=message)
         # print a message to the console for the user
         print(f" [x] Sent {message}")
     except pika.exceptions.AMQPConnectionError as e:
@@ -37,7 +37,7 @@ def send_message(host: str, queue_name: str, message: str):
         sys.exit(1)
     finally:
         # close the connection to the server
-        connection.close()
+        conn.close()
 
 # Standard Python idiom to indicate main program entry point
 # This allows us to import this module and use its functions
