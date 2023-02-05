@@ -75,15 +75,21 @@ Each of the version 2 programs include an error as well.
 1. Include your name and the date.
 1. Imports always go at the top, just after the file docstring.
 1. Imports should be one per line - why?
+    #### There are less merge conflicts when your imports are one per line.
 1. Then, define your functions.
+    #### We are defining how the message will be sent to the queue
 1. Functions are reuable logic blocks.
 1. Everything the function needs comes in through the arguments.
 1. A function may - or may not - return a value. 
 1. When we open a connection, we should close the connection. 
 1. Which of the 4 files will always close() the connection?
+    ##### v1_emit_message - the script ends with conn.close()
 1. Search GitHub for if __name__ == "__main__":
 1. How many hits did you get? 
+    ##### I see that there are 40 million under code, 556K+ under commites, 25K under issues, 820 under discussions, and 1K under Wikis.
+    
 1. Learn and understand this common Python idiom.
+    ##### You can use an if __name == "__main__" block to allow or prevent parts of code from being run when the modules are imported.
 
 ## Reference
 
