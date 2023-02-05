@@ -44,4 +44,4 @@ def send_message(host: str, queue_name: str, message: str):
 # without executing the code below.
 # If this is the program being run, then execute the code below
 if __name__ == "__main__":
-    send_message("localhost","hello","Hello World!")
+    send_message("localhost","hello","third_message")
